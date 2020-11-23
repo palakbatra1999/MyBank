@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".Shopping_Activity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:layout_below="@+id/warning"
+            android:id="@+id/btnAdd"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please select an item! "
+                android:textColor="#FF0008"
+                android:layout_marginTop="30dp"
+                android:visibility="gone"
+                android:id="@+id/warning"
+                android:layout_below="@+id/description"
+                android:layout_centerHorizontal="true"
+              />
+            
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/date_Relativelayout"
+                android:layout_below="@+id/item_relativelayout"
+                android:layout_marginTop="20dp">
+                
+                
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/txtDate"
+                  >
+
+                  <Button
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/btnpickdate"
+                      android:text="Select Date"
+                      android:layout_toRightOf="@+id/edittxtDate"
+                      />
+                    <EditText
+                        android:layout_width="230dp"
+                        android:id="@+id/edittxtDate"
+                        android:hint="date"
+
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Date :"
+                    android:id="@+id/txtDate"/>
+           </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+android:id="@+id/store"
+                android:layout_below="@+id/date_Relativelayout"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Store: "
+                    android:textStyle="bold"
+                    android:id="@+id/store_txt"
+                    />
+
+                <EditText
+                    android:layout_width="230dp"
+                    android:id="@+id/edittxtstore"
+                    android:hint="store"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                  android:id="@+id/description"
+                android:layout_below="@+id/store"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description: "
+                    android:textStyle="bold"
+                    android:id="@+id/des_txt"
+                    />
+
+                <EditText
+                    android:layout_width="230dp"
+                    android:id="@+id/edittxtdes"
+                    android:lines="2"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_relativelayout"
+                android:layout_marginTop="50sp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ADD SHOPPING"
+                    android:id="@+id/txt"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    />
+              <Button
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true"
+                  android:layout_below="@+id/txt"
+                  android:layout_marginTop="20dp"
+                  android:id="@+id/btnpick"
+                  android:text="Pick item"/>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnpick"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/itemrelative"
+                    >
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="wrap_content"
+                        android:src="@mipmap/ic_launcher"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/edt_price"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/image"
+                        android:hint="price"/>
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/itemname"
+                        android:layout_marginLeft="20dp"
+                        android:layout_below="@+id/edt_price"
+                        android:layout_toRightOf="@+id/image"
+                        android:layout_marginTop="10dp"
+                        android:text="item name"/>
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+    </RelativeLayout>
+  </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

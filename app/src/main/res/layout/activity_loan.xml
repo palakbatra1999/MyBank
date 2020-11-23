@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".LoanActivity">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Loan Activity"
+    android:layout_centerHorizontal="true"
+    android:id="@+id/txttop"
+    android:textSize="18sp"
+    android:layout_marginTop="20sp"
+    android:textStyle="bold"
+    />
+   <androidx.recyclerview.widget.RecyclerView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginBottom="50dp"
+       android:layout_below="@+id/txttop"
+       android:padding="10dp"
+       android:layout_marginTop="10dp"
+       android:id="@+id/loanrecView"/>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/navigationbar"
+        app:itemTextColor="@color/bottom_nav_color"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:menu="@menu/navigation_menu"
+        android:background="@drawable/toolbar_background"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

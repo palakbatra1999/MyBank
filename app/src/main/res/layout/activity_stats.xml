@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StatsActivity">
+
+   <androidx.core.widget.NestedScrollView
+       android:layout_width="match_parent"
+       android:layout_marginBottom="50dp"
+       android:layout_height="match_parent">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <com.github.mikephil.charting.charts.BarChart
+               android:layout_width="300dp"
+               android:layout_height="300dp"
+               android:id="@+id/barchart"
+               android:layout_centerHorizontal="true"
+               android:layout_marginTop="20sp"/>
+
+           <com.github.mikephil.charting.charts.PieChart
+               android:layout_width="300dp"
+               android:layout_height="300dp"
+               android:layout_below="@+id/barchart"
+               android:layout_marginTop="20sp"
+               android:id="@+id/piechart"
+               android:layout_marginBottom="50dp"
+               android:layout_centerHorizontal="true"/>
+
+
+
+
+       </RelativeLayout>
+
+   </androidx.core.widget.NestedScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/navigationbar"
+        app:itemTextColor="@color/bottom_nav_color"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:menu="@menu/navigation_menu"
+        android:background="@drawable/toolbar_background"
+        android:layout_alignParentBottom="true"/>
+
+
+
+</RelativeLayout>
